@@ -1,0 +1,3 @@
+#!/bin/sh
+export RUN_AS_USER=<%=node[:nexus][:username]%>
+<%=node[:nexus][:installdir]%>/bin/nexus "$@"
