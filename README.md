@@ -17,7 +17,36 @@ Requirements
 This cookbook requires you have the following cookbooks installed (or unpacked locally in the case of chef-solo):
 nginx
 ohai
-java
+java - I'm controlling the java version and where to find the tar for it in a role file that looks like this:
+
+{
+  "default_attributes": {
+  },
+  "name": "java7",
+  "chef_type": "role",
+  "env_run_lists": {
+  },
+  "description": "",
+  "json_class": "Chef::Role",
+  "override_attributes": {
+  "java": {
+    "jdk": {
+      "6": {
+        "x86_64": {
+          "url": "http://bafs.tor.rapid7.com/com/oracle/j2se-jdk/1.7.0_04/linux-x86_64/jdk-7u4-linux-x64.tar.gz",
+          "checksum": "92fbec82f2a33126b323877d012239ce516518c59073416116799d26fc70307c"
+        }
+      }
+    }
+   }
+  },
+  "run_list": [
+
+  ]
+}
+
+
+
 
 Attributes
 ==========
