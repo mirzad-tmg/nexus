@@ -8,6 +8,10 @@ Later, these will become flags you can set in the role/node configuration.
 
 Requirements
 ============
+This cookbook requires you have the following cookbooks installed (or unpacked locally in the case of chef-solo):
+nginx
+ohai
+java
 
 Attributes
 ==========
@@ -16,4 +20,4 @@ Usage
 =====
 Just add this to your node's runlist:
 
- "run_list": [ "recipe[nexus::nexus]]"
+ "run_list": [ "recipe[nexus::default]]"
